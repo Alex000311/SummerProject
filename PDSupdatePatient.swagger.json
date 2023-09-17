@@ -1,0 +1,888 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "PDSupdatePatient",
+    "description": "To update the address and pharmacy details of patient",
+    "version": "1.0"
+  },
+  "host": "int.api.service.nhs.uk",
+  "basePath": "/personal-demographics/FHIR/R4",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/Patient/{id}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "extension": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "extension": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "url": {
+                                    "type": "string",
+                                    "description": "url"
+                                  },
+                                  "valueCoding": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string",
+                                        "description": "code"
+                                      },
+                                      "system": {
+                                        "type": "string",
+                                        "description": "system"
+                                      }
+                                    },
+                                    "description": "valueCoding"
+                                  },
+                                  "valueString": {
+                                    "type": "string",
+                                    "description": "valueString"
+                                  }
+                                }
+                              },
+                              "description": "extension"
+                            },
+                            "url": {
+                              "type": "string",
+                              "description": "url"
+                            }
+                          }
+                        },
+                        "description": "extension"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "line": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "line"
+                      },
+                      "period": {
+                        "type": "object",
+                        "properties": {
+                          "end": {
+                            "type": "string",
+                            "description": "end"
+                          },
+                          "start": {
+                            "type": "string",
+                            "description": "start"
+                          }
+                        },
+                        "description": "period"
+                      },
+                      "postalCode": {
+                        "type": "string",
+                        "description": "postalCode"
+                      },
+                      "text": {
+                        "type": "string",
+                        "description": "text"
+                      },
+                      "use": {
+                        "type": "string",
+                        "description": "use"
+                      }
+                    }
+                  },
+                  "description": "address"
+                },
+                "birthDate": {
+                  "type": "string",
+                  "description": "birthDate"
+                },
+                "extension": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      },
+                      "valueReference": {
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "object",
+                            "properties": {
+                              "system": {
+                                "type": "string",
+                                "description": "system"
+                              },
+                              "value": {
+                                "type": "string",
+                                "description": "value"
+                              }
+                            },
+                            "description": "identifier"
+                          }
+                        },
+                        "description": "valueReference"
+                      }
+                    }
+                  },
+                  "description": "extension"
+                },
+                "gender": {
+                  "type": "string",
+                  "description": "gender"
+                },
+                "generalPractitioner": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "identifier": {
+                        "type": "object",
+                        "properties": {
+                          "period": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": "string",
+                                "description": "start"
+                              }
+                            },
+                            "description": "period"
+                          },
+                          "system": {
+                            "type": "string",
+                            "description": "system"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          }
+                        },
+                        "description": "identifier"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "type"
+                      }
+                    }
+                  },
+                  "description": "generalPractitioner"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "identifier": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "extension": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "url"
+                            },
+                            "valueCodeableConcept": {
+                              "type": "object",
+                              "properties": {
+                                "coding": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string",
+                                        "description": "code"
+                                      },
+                                      "display": {
+                                        "type": "string",
+                                        "description": "display"
+                                      },
+                                      "system": {
+                                        "type": "string",
+                                        "description": "system"
+                                      },
+                                      "version": {
+                                        "type": "string",
+                                        "description": "version"
+                                      }
+                                    }
+                                  },
+                                  "description": "coding"
+                                }
+                              },
+                              "description": "valueCodeableConcept"
+                            }
+                          }
+                        },
+                        "description": "extension"
+                      },
+                      "system": {
+                        "type": "string",
+                        "description": "system"
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "value"
+                      }
+                    }
+                  },
+                  "description": "identifier"
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "security": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "description": "code"
+                          },
+                          "display": {
+                            "type": "string",
+                            "description": "display"
+                          },
+                          "system": {
+                            "type": "string",
+                            "description": "system"
+                          }
+                        }
+                      },
+                      "description": "security"
+                    },
+                    "versionId": {
+                      "type": "string",
+                      "description": "versionId"
+                    }
+                  },
+                  "description": "meta"
+                },
+                "name": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "family": {
+                        "type": "string",
+                        "description": "family"
+                      },
+                      "given": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "given"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "period": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "string",
+                            "description": "start"
+                          }
+                        },
+                        "description": "period"
+                      },
+                      "prefix": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "prefix"
+                      },
+                      "use": {
+                        "type": "string",
+                        "description": "use"
+                      }
+                    }
+                  },
+                  "description": "name"
+                },
+                "resourceType": {
+                  "type": "string",
+                  "description": "resourceType"
+                }
+              }
+            },
+            "headers": {
+              "content-length": {
+                "description": "content-length",
+                "type": "string"
+              },
+              "content-type": {
+                "description": "content-type",
+                "type": "string"
+              },
+              "date": {
+                "description": "date",
+                "type": "string"
+              },
+              "etag": {
+                "description": "etag",
+                "type": "string"
+              },
+              "strict-transport-security": {
+                "description": "strict-transport-security",
+                "type": "string"
+              },
+              "x-ms-apihub-cached-response": {
+                "description": "x-ms-apihub-cached-response",
+                "type": "string"
+              },
+              "x-ms-apihub-obo": {
+                "description": "x-ms-apihub-obo",
+                "type": "string"
+              },
+              "x-request-id": {
+                "description": "x-request-id",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "GetAddress",
+        "description": "To get the address of patient",
+        "operationId": "GetAddress",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "X-Request-ID",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "x-ms-visibility": "important"
+      },
+      "patch": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "extension": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "extension": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "url": {
+                                    "type": "string",
+                                    "description": "url"
+                                  },
+                                  "valueCoding": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string",
+                                        "description": "code"
+                                      },
+                                      "system": {
+                                        "type": "string",
+                                        "description": "system"
+                                      }
+                                    },
+                                    "description": "valueCoding"
+                                  },
+                                  "valueString": {
+                                    "type": "string",
+                                    "description": "valueString"
+                                  }
+                                }
+                              },
+                              "description": "extension"
+                            },
+                            "url": {
+                              "type": "string",
+                              "description": "url"
+                            }
+                          }
+                        },
+                        "description": "extension"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "line": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "line"
+                      },
+                      "period": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "string",
+                            "description": "start"
+                          }
+                        },
+                        "description": "period"
+                      },
+                      "postalCode": {
+                        "type": "string",
+                        "description": "postalCode"
+                      },
+                      "use": {
+                        "type": "string",
+                        "description": "use"
+                      }
+                    }
+                  },
+                  "description": "address"
+                },
+                "birthDate": {
+                  "type": "string",
+                  "description": "birthDate"
+                },
+                "extension": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      },
+                      "valueReference": {
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "object",
+                            "properties": {
+                              "system": {
+                                "type": "string",
+                                "description": "system"
+                              },
+                              "value": {
+                                "type": "string",
+                                "description": "value"
+                              }
+                            },
+                            "description": "identifier"
+                          }
+                        },
+                        "description": "valueReference"
+                      }
+                    }
+                  },
+                  "description": "extension"
+                },
+                "gender": {
+                  "type": "string",
+                  "description": "gender"
+                },
+                "generalPractitioner": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "identifier": {
+                        "type": "object",
+                        "properties": {
+                          "period": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": "string",
+                                "description": "start"
+                              }
+                            },
+                            "description": "period"
+                          },
+                          "system": {
+                            "type": "string",
+                            "description": "system"
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "value"
+                          }
+                        },
+                        "description": "identifier"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "type"
+                      }
+                    }
+                  },
+                  "description": "generalPractitioner"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "identifier": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "extension": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "url"
+                            },
+                            "valueCodeableConcept": {
+                              "type": "object",
+                              "properties": {
+                                "coding": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "code": {
+                                        "type": "string",
+                                        "description": "code"
+                                      },
+                                      "display": {
+                                        "type": "string",
+                                        "description": "display"
+                                      },
+                                      "system": {
+                                        "type": "string",
+                                        "description": "system"
+                                      },
+                                      "version": {
+                                        "type": "string",
+                                        "description": "version"
+                                      }
+                                    }
+                                  },
+                                  "description": "coding"
+                                }
+                              },
+                              "description": "valueCodeableConcept"
+                            }
+                          }
+                        },
+                        "description": "extension"
+                      },
+                      "system": {
+                        "type": "string",
+                        "description": "system"
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "value"
+                      }
+                    }
+                  },
+                  "description": "identifier"
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "security": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "description": "code"
+                          },
+                          "display": {
+                            "type": "string",
+                            "description": "display"
+                          },
+                          "system": {
+                            "type": "string",
+                            "description": "system"
+                          }
+                        }
+                      },
+                      "description": "security"
+                    },
+                    "versionId": {
+                      "type": "string",
+                      "description": "versionId"
+                    }
+                  },
+                  "description": "meta"
+                },
+                "name": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "family": {
+                        "type": "string",
+                        "description": "family"
+                      },
+                      "given": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "given"
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "period": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "string",
+                            "description": "start"
+                          }
+                        },
+                        "description": "period"
+                      },
+                      "prefix": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "prefix"
+                      },
+                      "use": {
+                        "type": "string",
+                        "description": "use"
+                      }
+                    }
+                  },
+                  "description": "name"
+                },
+                "resourceType": {
+                  "type": "string",
+                  "description": "resourceType"
+                },
+                "telecom": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "period": {
+                        "type": "object",
+                        "properties": {
+                          "start": {
+                            "type": "string",
+                            "description": "start"
+                          }
+                        },
+                        "description": "period"
+                      },
+                      "system": {
+                        "type": "string",
+                        "description": "system"
+                      },
+                      "use": {
+                        "type": "string",
+                        "description": "use"
+                      },
+                      "value": {
+                        "type": "string",
+                        "description": "value"
+                      }
+                    }
+                  },
+                  "description": "telecom"
+                }
+              }
+            },
+            "headers": {
+              "content-length": {
+                "description": "content-length",
+                "type": "string"
+              },
+              "content-type": {
+                "description": "content-type",
+                "type": "string"
+              },
+              "date": {
+                "description": "date",
+                "type": "string"
+              },
+              "etag": {
+                "description": "etag",
+                "type": "string"
+              },
+              "strict-transport-security": {
+                "description": "strict-transport-security",
+                "type": "string"
+              },
+              "x-ms-apihub-cached-response": {
+                "description": "x-ms-apihub-cached-response",
+                "type": "string"
+              },
+              "x-ms-apihub-obo": {
+                "description": "x-ms-apihub-obo",
+                "type": "string"
+              },
+              "x-request-id": {
+                "description": "x-request-id",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "Update the Address",
+        "operationId": "UpdateAddress",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "X-Request-ID",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json-patch+json"
+          },
+          {
+            "name": "If-Match",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "patches": {
+                  "type": "string",
+                  "description": "patches"
+                },
+                "path1": {
+                  "type": "string",
+                  "description": "path1"
+                },
+                "path2": {
+                  "type": "string",
+                  "description": "path2"
+                },
+                "path3": {
+                  "type": "string",
+                  "description": "path3"
+                },
+                "path4": {
+                  "type": "string",
+                  "description": "path4"
+                },
+                "value1": {
+                  "type": "string",
+                  "description": "value1"
+                },
+                "value2": {
+                  "type": "string",
+                  "description": "value2"
+                },
+                "value3": {
+                  "type": "string",
+                  "description": "value3"
+                },
+                "value4": {
+                  "type": "string",
+                  "description": "value4",
+                  "title": "",
+                  "format": ""
+                }
+              }
+            }
+          }
+        ],
+        "description": "To update the address of patient",
+        "x-ms-visibility": "important"
+      }
+    },
+    "/R4/Patient/{id}": {}
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://int.api.service.nhs.uk/oauth2-mock/authorize",
+      "tokenUrl": "https://int.api.service.nhs.uk/oauth2-mock/token",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2-auth": []
+    }
+  ],
+  "tags": []
+}
